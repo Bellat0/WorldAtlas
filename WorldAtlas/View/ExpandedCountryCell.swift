@@ -85,6 +85,7 @@ class ExpandedCountryCell: UITableViewCell {
         populationNumberLabel.snp.makeConstraints { make in
             make.leading.equalTo(populationLabel.snp.trailing).offset(4)
             make.top.equalTo(countryCapitalLabel.snp.bottom).offset(16)
+            make.top.equalTo(flagImage.snp.bottom).offset(12)
         }
 
         contentView.addSubview(areaLabel)
@@ -128,6 +129,7 @@ class ExpandedCountryCell: UITableViewCell {
         flagImage.layer.cornerRadius = 8
 
         countryNameLabel.text = "Kazakhstan"
+        countryNameLabel.numberOfLines = 0
         countryNameLabel.font = UIFont(name: "SFProText-Semibold", size: 17)
         countryNameLabel.textColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
 
@@ -164,6 +166,37 @@ class ExpandedCountryCell: UITableViewCell {
         learnMoreButton.titleLabel?.font = UIFont(name: "SFProText-Semibold", size: 17)
 
         expandButton.tintColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
+    }
+
+    func configure(item: Country, isExpanded: Bool) {
+        let countriestListVc = CountriesList()
+
+        countryNameLabel.text = item.name.common
+        countryNameLabel.numberOfLines = 0
+
+        countryCapitalLabel.text = item.capital?.first
+        countryCapitalLabel.numberOfLines = 0
+
+        let population = countriestListVc.formatPopulationNumber(item.population)
+        populationNumberLabel.text = "\(population)"
+
+        let area = countriestListVc.formatAreaNumber(item.area)
+        areaNumberLabel.text = "\(area)"
+
+        expandButton.setImage(isExpanded ? UIImage(systemName: "chevron.up") : UIImage(systemName: "chevron.down"), for: .normal)
+
+        DispatchQueue.global().async {
+            guard
+                let url = URL(string: item.flags.png),
+                let data = try? Data(contentsOf: url)
+            else {
+                return
+            }
+
+            DispatchQueue.main.async {
+                self.flagImage.image = UIImage(data: data)
+            }
+        }
     }
 
 

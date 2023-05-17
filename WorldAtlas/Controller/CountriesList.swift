@@ -52,6 +52,32 @@ class CountriesList: UIViewController {
             HeaderSectionView.self,
             forHeaderFooterViewReuseIdentifier: HeaderSectionView.ID)
     }
+
+    //MARK: Functions for Population and Area numbers
+
+    func formatPopulationNumber(_ number: Int) -> String {
+        let million = 1_000_000
+
+        if number >= million {
+            let formattedNumber = Double(number) / Double(million)
+            return String(format: "%.0f", formattedNumber) + " mln"
+        } else {
+            let formattedNumber = Double(number) / Double(million)
+            return String(format: "%.6f", formattedNumber) + " mln"
+        }
+    }
+
+    func formatAreaNumber(_ area: Double) -> String {
+        let million = 1_000_000.0
+
+        if area >= million {
+            let formattedArea = Double(area) / Double(million)
+            return String(format: "%.3f", formattedArea) + " mln km²"
+        } else {
+            let formattedArea = Double(area) / Double(million)
+            return String(format: "%.6f", formattedArea) + " mln km²"
+        }
+    }
 }
 
 //MARK: TableView Delegate
@@ -73,6 +99,8 @@ extension CountriesList: UITableViewDataSource, UITableViewDelegate {
                 for: indexPath
             ) as? ExpandedCountryCell else { return UITableViewCell() }
 
+            cell.configure(item: country, isExpanded: country.isExpanded)
+            
             return cell
 
         } else {
@@ -80,7 +108,6 @@ extension CountriesList: UITableViewDataSource, UITableViewDelegate {
                 withIdentifier: CollapsedCountryCell.ID,
                 for: indexPath
             ) as? CollapsedCountryCell else { return UITableViewCell() }
-
 
             cell.configureCell(item: country, isExpanded: country.isExpanded)
 
@@ -106,6 +133,8 @@ extension CountriesList: UITableViewDataSource, UITableViewDelegate {
     //MARK: DidSelectRow
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        tableView.deselectRow(at: indexPath, animated: true)
+        item[indexPath.section].country[indexPath.row].isExpanded.toggle()
+        tableView.reloadRows(at: [indexPath], with: .automatic)
     }
 }

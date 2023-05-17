@@ -18,7 +18,7 @@ struct CountryData: Decodable {
 
 
 struct Country {
-    let isExpanded: Bool = false
+    var isExpanded: Bool = false
     let continents: Continent
     let name: Name
     let flags: Flags
@@ -37,7 +37,7 @@ struct Country {
 }
 
 struct Item {
-    let country: [Country]
+    var country: [Country]
     let continent: Continent
 }
 

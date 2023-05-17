@@ -36,7 +36,13 @@ class NetworkManager {
                     }
                 }
 
-                let item = continentWithCountry.map { Item(country: $0.value, continent: $0.key) }
+                let item = continentWithCountry.sorted(
+                    by:
+                        { lhs, rhs in
+                            lhs.key.rawValue < rhs.key.rawValue
+                        })
+
+                    .map { Item(country: $0.value, continent: $0.key) }
                 completion(item)
 
             } catch let error {
