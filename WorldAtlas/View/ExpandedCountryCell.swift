@@ -11,7 +11,7 @@ class ExpandedCountryCell: UITableViewCell {
 
     static let ID = "ExpandedCountryCell"
 
-//    var didTapLearMoreButton: (() -> Void)?
+    var didTapLearnMoreButton: (() -> Void)?
 
     private let rectView = UIView()
     private let flagImage = UIImageView()
@@ -118,7 +118,11 @@ class ExpandedCountryCell: UITableViewCell {
             make.top.equalTo(currenciesNumberLabel.snp.bottom).offset(26)
 //            make.bottom.equalTo(rectView.snp.bottom).offset(-26)
         }
-//        learnMoreButton.addTarget(self, action: #selector(learnMoreTapped), for: .touchUpInside)
+        learnMoreButton.addTarget(self, action: #selector(learnMoreTapped), for: .touchUpInside)
+    }
+
+    @objc func learnMoreTapped() {
+        didTapLearnMoreButton?()
     }
 
     private func detailsexpandedMode() {

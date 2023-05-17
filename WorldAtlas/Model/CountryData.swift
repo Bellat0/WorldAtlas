@@ -14,6 +14,9 @@ struct CountryData: Decodable {
     let capital: [String]?
     let population: Int
     let area: Double
+    let subregion: String?
+    let capitalInfo: CapitalInfo
+    let timezones: [String]
 }
 
 
@@ -25,6 +28,9 @@ struct Country {
     let capital: [String]?
     let population: Int
     let area: Double
+    let subregion: String?
+    let capitalInfo: CapitalInfo
+    let timezones: [String]
 
     init(response: CountryData) {
         self.continents = response.continents.first ?? .europe
@@ -33,6 +39,9 @@ struct Country {
         self.capital = response.capital
         self.population = response.population
         self.area = response.area
+        self.subregion = response.subregion
+        self.capitalInfo = response.capitalInfo
+        self.timezones = response.timezones
     }
 }
 
@@ -57,4 +66,8 @@ struct Name: Codable {
 
 struct Flags: Codable {
     let png: String
+}
+
+struct CapitalInfo: Codable {
+    let latlng: [Double]?
 }

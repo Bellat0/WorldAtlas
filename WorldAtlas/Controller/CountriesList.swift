@@ -100,7 +100,10 @@ extension CountriesList: UITableViewDataSource, UITableViewDelegate {
             ) as? ExpandedCountryCell else { return UITableViewCell() }
 
             cell.configure(item: country, isExpanded: country.isExpanded)
-            
+            cell.didTapLearnMoreButton = { [weak self] in
+                let detailVC = CountryDetails(country: country)
+                self?.navigationController?.show(detailVC, sender: nil)
+            }
             return cell
 
         } else {
