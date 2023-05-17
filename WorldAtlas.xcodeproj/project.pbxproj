@@ -9,21 +9,36 @@
 /* Begin PBXBuildFile section */
 		9417322A2A14957D00BED3A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941732292A14957D00BED3A4 /* AppDelegate.swift */; };
 		9417322C2A14957D00BED3A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9417322B2A14957D00BED3A4 /* SceneDelegate.swift */; };
-		9417322E2A14957D00BED3A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9417322D2A14957D00BED3A4 /* ViewController.swift */; };
-		941732312A14957D00BED3A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9417322F2A14957D00BED3A4 /* Main.storyboard */; };
+		9417322E2A14957D00BED3A4 /* CountriesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9417322D2A14957D00BED3A4 /* CountriesList.swift */; };
 		941732332A14957E00BED3A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 941732322A14957E00BED3A4 /* Assets.xcassets */; };
 		941732362A14957E00BED3A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 941732342A14957E00BED3A4 /* LaunchScreen.storyboard */; };
+		9417323E2A14958800BED3A4 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 9417323D2A14958800BED3A4 /* .gitignore */; };
+		94BAE2132A14970D00841856 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 94BAE2122A14970D00841856 /* SnapKit */; };
+		94BAE2152A14A12000841856 /* CollapsedCountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BAE2142A14A12000841856 /* CollapsedCountryCell.swift */; };
+		94BAE2172A14A3BE00841856 /* HeaderSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BAE2162A14A3BE00841856 /* HeaderSectionView.swift */; };
+		94BAE22C2A14A6B700841856 /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 94BAE21A2A14A6B500841856 /* SF-Pro-Text-Semibold.otf */; };
+		94BAE2332A14A6B700841856 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 94BAE2212A14A6B600841856 /* SF-Pro-Text-Regular.otf */; };
+		94BAE2382A14A6B700841856 /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 94BAE2262A14A6B600841856 /* SF-Pro-Text-Bold.otf */; };
+		94BAE23C2A14A6B700841856 /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 94BAE22A2A14A6B700841856 /* SF-Pro-Text-Medium.otf */; };
+		94BAE23E2A14A93200841856 /* ExpandedCountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BAE23D2A14A93200841856 /* ExpandedCountryCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		941732262A14957D00BED3A4 /* WorldAtlas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldAtlas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		941732292A14957D00BED3A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9417322B2A14957D00BED3A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9417322D2A14957D00BED3A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		941732302A14957D00BED3A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9417322D2A14957D00BED3A4 /* CountriesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesList.swift; sourceTree = "<group>"; };
 		941732322A14957E00BED3A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		941732352A14957E00BED3A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		941732372A14957E00BED3A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9417323D2A14958800BED3A4 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		94BAE2142A14A12000841856 /* CollapsedCountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollapsedCountryCell.swift; sourceTree = "<group>"; };
+		94BAE2162A14A3BE00841856 /* HeaderSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderSectionView.swift; sourceTree = "<group>"; };
+		94BAE21A2A14A6B500841856 /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
+		94BAE2212A14A6B600841856 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
+		94BAE2262A14A6B600841856 /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
+		94BAE22A2A14A6B700841856 /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; };
+		94BAE23D2A14A93200841856 /* ExpandedCountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedCountryCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94BAE2132A14970D00841856 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +56,7 @@
 		9417321D2A14957D00BED3A4 = {
 			isa = PBXGroup;
 			children = (
+				9417323D2A14958800BED3A4 /* .gitignore */,
 				941732282A14957D00BED3A4 /* WorldAtlas */,
 				941732272A14957D00BED3A4 /* Products */,
 			);
@@ -56,15 +73,61 @@
 		941732282A14957D00BED3A4 /* WorldAtlas */ = {
 			isa = PBXGroup;
 			children = (
+				94BAE2102A1496C400841856 /* Model */,
+				94BAE20E2A1496BA00841856 /* Controller */,
+				94BAE20F2A1496C000841856 /* View */,
+				94BAE20D2A14968900841856 /* Support files */,
+			);
+			path = WorldAtlas;
+			sourceTree = "<group>";
+		};
+		94BAE20D2A14968900841856 /* Support files */ = {
+			isa = PBXGroup;
+			children = (
+				94BAE2182A14A63A00841856 /* Fonts */,
 				941732292A14957D00BED3A4 /* AppDelegate.swift */,
 				9417322B2A14957D00BED3A4 /* SceneDelegate.swift */,
-				9417322D2A14957D00BED3A4 /* ViewController.swift */,
-				9417322F2A14957D00BED3A4 /* Main.storyboard */,
 				941732322A14957E00BED3A4 /* Assets.xcassets */,
 				941732342A14957E00BED3A4 /* LaunchScreen.storyboard */,
 				941732372A14957E00BED3A4 /* Info.plist */,
 			);
-			path = WorldAtlas;
+			path = "Support files";
+			sourceTree = "<group>";
+		};
+		94BAE20E2A1496BA00841856 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9417322D2A14957D00BED3A4 /* CountriesList.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		94BAE20F2A1496C000841856 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				94BAE2142A14A12000841856 /* CollapsedCountryCell.swift */,
+				94BAE23D2A14A93200841856 /* ExpandedCountryCell.swift */,
+				94BAE2162A14A3BE00841856 /* HeaderSectionView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		94BAE2102A1496C400841856 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		94BAE2182A14A63A00841856 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				94BAE2262A14A6B600841856 /* SF-Pro-Text-Bold.otf */,
+				94BAE22A2A14A6B700841856 /* SF-Pro-Text-Medium.otf */,
+				94BAE2212A14A6B600841856 /* SF-Pro-Text-Regular.otf */,
+				94BAE21A2A14A6B500841856 /* SF-Pro-Text-Semibold.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +146,9 @@
 			dependencies = (
 			);
 			name = WorldAtlas;
+			packageProductDependencies = (
+				94BAE2122A14970D00841856 /* SnapKit */,
+			);
 			productName = WorldAtlas;
 			productReference = 941732262A14957D00BED3A4 /* WorldAtlas.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +177,9 @@
 				Base,
 			);
 			mainGroup = 9417321D2A14957D00BED3A4;
+			packageReferences = (
+				94BAE2112A14970D00841856 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 941732272A14957D00BED3A4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,9 +194,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9417323E2A14958800BED3A4 /* .gitignore in Resources */,
+				94BAE23C2A14A6B700841856 /* SF-Pro-Text-Medium.otf in Resources */,
 				941732362A14957E00BED3A4 /* LaunchScreen.storyboard in Resources */,
+				94BAE2382A14A6B700841856 /* SF-Pro-Text-Bold.otf in Resources */,
+				94BAE2332A14A6B700841856 /* SF-Pro-Text-Regular.otf in Resources */,
+				94BAE22C2A14A6B700841856 /* SF-Pro-Text-Semibold.otf in Resources */,
 				941732332A14957E00BED3A4 /* Assets.xcassets in Resources */,
-				941732312A14957D00BED3A4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +211,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9417322E2A14957D00BED3A4 /* ViewController.swift in Sources */,
+				94BAE2172A14A3BE00841856 /* HeaderSectionView.swift in Sources */,
+				94BAE23E2A14A93200841856 /* ExpandedCountryCell.swift in Sources */,
+				9417322E2A14957D00BED3A4 /* CountriesList.swift in Sources */,
 				9417322A2A14957D00BED3A4 /* AppDelegate.swift in Sources */,
+				94BAE2152A14A12000841856 /* CollapsedCountryCell.swift in Sources */,
 				9417322C2A14957D00BED3A4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,14 +223,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9417322F2A14957D00BED3A4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				941732302A14957D00BED3A4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		941732342A14957E00BED3A4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -289,10 +357,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J8L5S42HGH;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WorldAtlas/Info.plist;
+				INFOPLIST_FILE = "WorldAtlas/Support files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -317,10 +384,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J8L5S42HGH;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WorldAtlas/Info.plist;
+				INFOPLIST_FILE = "WorldAtlas/Support files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -358,6 +424,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		94BAE2112A14970D00841856 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		94BAE2122A14970D00841856 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 94BAE2112A14970D00841856 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9417321E2A14957D00BED3A4 /* Project object */;
 }
