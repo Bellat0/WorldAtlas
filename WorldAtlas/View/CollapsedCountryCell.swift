@@ -86,4 +86,23 @@ class CollapsedCountryCell: UITableViewCell {
 
         expandButton.tintColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
     }
+
+    func configureCell(item: Country, isExpanded: Bool) {
+        countryNameLabel.text = item.name.common
+
+        countryCapitalLabel.text = item.capital?.first
+
+        expandButton.setImage(isExpanded ? UIImage(systemName: "chevron.up")
+                              : UIImage(systemName: "chevron.down"), for: .normal)
+
+        DispatchQueue.global().async {
+            guard
+                let url = URL(string: item.flags.png),
+                let data = try? Data(contentsOf: url)
+            else { return }
+            DispatchQueue.main.async {
+                self.flagImage.image = UIImage(data: data)
+            }
+        }
+    }
 }

@@ -10,13 +10,22 @@ import SnapKit
 
 class CountriesList: UIViewController {
 
+    private let networdManager = NetworkManager()
+
     private let tableView = UITableView()
+    private var item = [Item]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         layoutUI()
         detailsUI()
+
+        networdManager.fetchData { item in
+            DispatchQueue.main.async {
+                self.item = item
+                self.tableView.reloadData()
+            }
+        }
     }
 
     private func layoutUI() {
@@ -49,26 +58,34 @@ class CountriesList: UIViewController {
 
 extension CountriesList: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return item.count
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return item[section].country.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        guard let cell = tableView.dequeueReusableCell(
-//            withIdentifier: CollapsedCountryCell.ID,
-//            for: indexPath
-//        ) as? CollapsedCountryCell else { return UITableViewCell() }
-//
-//        return cell
+        let country = item[indexPath.section].country[indexPath.row]
 
-        guard let cell = tableView.dequeueReusableCell(
-            withIdentifier: ExpandedCountryCell.ID,
-            for: indexPath
-        ) as? ExpandedCountryCell else { return UITableViewCell() }
+        if country.isExpanded {
+            guard let cell = tableView.dequeueReusableCell(
+                withIdentifier: ExpandedCountryCell.ID,
+                for: indexPath
+            ) as? ExpandedCountryCell else { return UITableViewCell() }
 
-        return cell
+            return cell
+
+        } else {
+            guard let cell = tableView.dequeueReusableCell(
+                withIdentifier: CollapsedCountryCell.ID,
+                for: indexPath
+            ) as? CollapsedCountryCell else { return UITableViewCell() }
+
+
+            cell.configureCell(item: country, isExpanded: country.isExpanded)
+
+            return cell
+        }
     }
 
     //MARK: HeaderView
@@ -78,11 +95,17 @@ extension CountriesList: UITableViewDataSource, UITableViewDelegate {
             withIdentifier: HeaderSectionView.ID
         ) as? HeaderSectionView else { return nil }
 
-        sectionHeader.details(title: "SectionTitle")
+        sectionHeader.details(title: item[section].continent.rawValue)
         return sectionHeader
     }
 
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 36
+    }
+
+    //MARK: DidSelectRow
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
     }
 }

@@ -21,6 +21,8 @@
 		94BAE2382A14A6B700841856 /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 94BAE2262A14A6B600841856 /* SF-Pro-Text-Bold.otf */; };
 		94BAE23C2A14A6B700841856 /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 94BAE22A2A14A6B700841856 /* SF-Pro-Text-Medium.otf */; };
 		94BAE23E2A14A93200841856 /* ExpandedCountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BAE23D2A14A93200841856 /* ExpandedCountryCell.swift */; };
+		94BAE2402A14ABE900841856 /* CountryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BAE23F2A14ABE900841856 /* CountryData.swift */; };
+		94BAE2422A14AC9F00841856 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BAE2412A14AC9F00841856 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		94BAE2262A14A6B600841856 /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
 		94BAE22A2A14A6B700841856 /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; };
 		94BAE23D2A14A93200841856 /* ExpandedCountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedCountryCell.swift; sourceTree = "<group>"; };
+		94BAE23F2A14ABE900841856 /* CountryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryData.swift; sourceTree = "<group>"; };
+		94BAE2412A14AC9F00841856 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,8 @@
 		94BAE2102A1496C400841856 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				94BAE2412A14AC9F00841856 /* NetworkManager.swift */,
+				94BAE23F2A14ABE900841856 /* CountryData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -213,7 +219,9 @@
 			files = (
 				94BAE2172A14A3BE00841856 /* HeaderSectionView.swift in Sources */,
 				94BAE23E2A14A93200841856 /* ExpandedCountryCell.swift in Sources */,
+				94BAE2402A14ABE900841856 /* CountryData.swift in Sources */,
 				9417322E2A14957D00BED3A4 /* CountriesList.swift in Sources */,
+				94BAE2422A14AC9F00841856 /* NetworkManager.swift in Sources */,
 				9417322A2A14957D00BED3A4 /* AppDelegate.swift in Sources */,
 				94BAE2152A14A12000841856 /* CollapsedCountryCell.swift in Sources */,
 				9417322C2A14957D00BED3A4 /* SceneDelegate.swift in Sources */,
